@@ -1,4 +1,4 @@
-node_modules
 dist
-.gitignore
-src/components/ui
+node_modules
+.git
+.github
