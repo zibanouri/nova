@@ -1,7 +1,6 @@
+import Dashboard from '../components/Dashboard.tsx';
 const Index = () => {
-  return (
-    <div>hallo</div>
-  );
+    return <Dashboard />;
 };
 
 export default Index;
