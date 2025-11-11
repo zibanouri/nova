@@ -4,12 +4,10 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
+    "build": "vite build",
     "dev": "vite",
-    "build": "tsc -b && vite build",
     "lint": "eslint .",
-    "preview": "vite preview",
-    "format": "prettier --write .",
-    "deploy": "gh-pages -d dist"
+    "preview": "vite preview"
   },
   "keywords": [
     "react",
