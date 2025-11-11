@@ -13,7 +13,6 @@ const DashboardNavbar = () => {
 
       {/* Right Section */}
       <div className="flex items-center gap-3">
-        
         <button
           aria-label="Toggle theme"
           className="p-2 rounded-md hover:bg-muted transition-colors"
@@ -22,8 +21,6 @@ const DashboardNavbar = () => {
           <Moon className="h-5 w-5 text-foreground block dark:hidden" />
         </button>
 
-       
-       
         <div className="w-8 h-8 rounded-full bg-muted flex items-center justify-center text-foreground text-sm font-medium">
           Z
         </div>

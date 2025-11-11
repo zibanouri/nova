@@ -6,7 +6,6 @@ import reactX from 'eslint-plugin-react-x';
 import reactDom from 'eslint-plugin-react-dom';
 
 export default tseslint.config(
- 
   { ignores: ['dist/', 'node_modules/'] },
 
   eslint.configs.recommended,
@@ -35,7 +34,7 @@ export default tseslint.config(
     ],
     languageOptions: {
       parserOptions: {
-        projectService: true, 
+        projectService: true,
         tsconfigRootDir: import.meta.dirname,
       },
     },
