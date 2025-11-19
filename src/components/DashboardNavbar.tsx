@@ -1,6 +1,6 @@
 import { Moon, Sun, User } from 'lucide-react'; 
 import { useState, useEffect } from 'react';
-
+import { Button } from "@/components/ui/button"; 
 const DashboardNavbar = () => {
   const [isDark, setIsDark] = useState(false);
 
