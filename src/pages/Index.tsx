@@ -1,4 +1,4 @@
-import Dashboard from '../components/Dashboard.tsx';
+import Dashboard from '../components/DashboardNavbar.tsx';
 const Index = () => {
   return <Dashboard />;
 };
