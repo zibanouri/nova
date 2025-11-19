@@ -31,6 +31,7 @@ const DashboardNavbar = () => {
     <nav className="fixed top-0 left-0 right-0 z-40 h-14 border-b bg-background px-4 flex items-center justify-between">
       <div className="flex items-center gap-2">
         <div className="size-7 rounded bg-primary flex items-center justify-center">
+          <span className="text-primary-foreground text-xs font-bold">N</span>
         </div>
         <span className="text-sm font-medium text-foreground">nova</span>
       </div>
