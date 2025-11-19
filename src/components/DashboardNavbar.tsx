@@ -27,7 +27,7 @@ const DashboardNavbar = () => {
     }
   };
 
-  return (
+   return (
     <nav className="fixed top-0 left-0 right-0 z-40 h-14 border-b bg-background px-4 flex items-center justify-between">
       <div className="flex items-center gap-2">
         <div className="size-7 rounded bg-primary flex items-center justify-center">
@@ -37,20 +37,31 @@ const DashboardNavbar = () => {
       </div>
 
       <div className="flex items-center gap-1.5">
-        <button
+        {/* دکمه تم با استایل ShadCN */}
+        <Button
+          variant="ghost" // بدون پس‌زمینه، فقط hover
+          size="icon"
           onClick={toggleTheme}
           aria-label={isDark ? "Switch to light mode" : "Switch to dark mode"}
-          className="p-1.5 rounded-md text-foreground hover:bg-muted transition-colors"
         >
-          {isDark ? <Sun className="h-4 w-4" /> : <Moon className="h-4 w-4" />}
-        </button>
-        <div className="p-1.5 rounded-md hover:bg-muted transition-colors">
-          <User className="size-5 text-foreground" />
-        </div>
+          {isDark ? (
+            <Sun className="h-4 w-4" />
+          ) : (
+            <Moon className="h-4 w-4" />
+          )}
+        </Button>
+        <Button
+          variant="ghost"
+          size="icon"
+          aria-label="User profile"
+        >
+          <User className="h-5 w-5" />
+        </Button>
       </div>
     </nav>
   );
 };
+
 
 
 export default DashboardNavbar;
