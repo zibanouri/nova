@@ -1,6 +1,6 @@
-import { Moon, Sun, User } from 'lucide-react'; 
+import { Moon, Sun, User } from 'lucide-react';
 import { useState, useEffect } from 'react';
-import { Button } from "@/components/ui/button"; 
+import { Button } from '@/components/ui/button';
 const DashboardNavbar = () => {
   const [isDark, setIsDark] = useState(false);
 
@@ -27,7 +27,7 @@ const DashboardNavbar = () => {
     }
   };
 
-   return (
+  return (
     <nav className="fixed top-0 left-0 right-0 z-40 h-14 border-b bg-background px-4 flex items-center justify-between">
       <div className="flex items-center gap-2">
         <div className="size-7 rounded bg-primary flex items-center justify-center">
@@ -42,26 +42,16 @@ const DashboardNavbar = () => {
           variant="ghost" // بدون پس‌زمینه، فقط hover
           size="icon"
           onClick={toggleTheme}
-          aria-label={isDark ? "Switch to light mode" : "Switch to dark mode"}
+          aria-label={isDark ? 'Switch to light mode' : 'Switch to dark mode'}
         >
-          {isDark ? (
-            <Sun className="h-4 w-4" />
-          ) : (
-            <Moon className="h-4 w-4" />
-          )}
+          {isDark ? <Sun className="h-4 w-4" /> : <Moon className="h-4 w-4" />}
         </Button>
-        <Button
-          variant="ghost"
-          size="icon"
-          aria-label="User profile"
-        >
+        <Button variant="ghost" size="icon" aria-label="User profile">
           <User className="h-5 w-5" />
         </Button>
       </div>
     </nav>
   );
 };
-
-
 
 export default DashboardNavbar;
