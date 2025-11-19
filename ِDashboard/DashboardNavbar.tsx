@@ -31,23 +31,23 @@ const DashboardNavbar = () => {
     <nav className="fixed top-0 left-0 right-0 z-40 h-14 border-b bg-background px-4 flex items-center justify-between">
       <div className="flex items-center gap-2">
         <div className="size-7 rounded bg-primary flex items-center justify-center">
-          <span className="text-primary-foreground text-xs font-bold">N</span>
         </div>
         <span className="text-sm font-medium text-foreground">nova</span>
       </div>
 
       <div className="flex items-center gap-1.5">
-        {/* دکمه تم با استایل ShadCN */}
         <Button
-          variant="ghost" // بدون پس‌زمینه، فقط hover
+          variant="ghost" 
           size="icon"
           onClick={toggleTheme}
           aria-label={isDark ? 'Switch to light mode' : 'Switch to dark mode'}
         >
-          {isDark ? <Sun className="h-4 w-4" /> : <Moon className="h-4 w-4" />}
+          {isDark ? <Sun className="h-6 w-6" /> : <Moon className="h-6 w-6" />}
         </Button>
-        <Button variant="ghost" size="icon" aria-label="User profile">
-          <User className="h-5 w-5" />
+        <Button variant="ghost"
+         size="icon" 
+         aria-label="User">
+          <User className="h-6 w-6" />
         </Button>
       </div>
     </nav>
