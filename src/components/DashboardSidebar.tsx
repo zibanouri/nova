@@ -1,4 +1,5 @@
 import * as React from "react";
+import { SidebarTrigger } from "@/components/ui/sidebar";
 import {
   Sidebar,
   SidebarContent,
