@@ -26,6 +26,19 @@ const DashboardNavbar = () => {
     localStorage.setItem('theme', newTheme);
     document.documentElement.classList.toggle('dark', newTheme === 'dark');
   };
+
+  const handleLogin = () =>{
+    console.log("Login clicked");
+    setIsLoggedIn(true)
+  };
+
+ const handleLogout = () => {
+    console.log("Logout clicked");
+    setIsLoggedIn(false);
+  };
+
+  
+
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 h-14 border-b bg-background/80  backdrop-blur-sm px-4 flex items-center justify-between">
       <div className="flex items-center gap-2">
