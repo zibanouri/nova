@@ -34,6 +34,18 @@ const DashboardNavbar = () => {
                 </div>
                 <span className="text-lg font-semibold">nova</span>
             </div>
+<div className="flex items-center gap-2">
+<Button 
+variant="ghost"
+size="default"
+onClick={toggleTheme}
+aria-label={isDark}
+>
+    {isDark ? <Sun className="h-5 w-5" /> : <Moon className="h-5 w-5" />}
+</Button>
+
+</div>
+
         </nav>
     )
 
