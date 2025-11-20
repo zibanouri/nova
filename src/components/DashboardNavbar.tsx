@@ -2,15 +2,39 @@ import { Moon, Sun, User } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import {
-  DropdownMenu,
-  DropdownMenuContent,
-  DropdownMenuItem,
-  DropdownMenuTrigger,
+    DropdownMenu,
+    DropdownMenuContent,
+    DropdownMenuItem,
+    DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
-const DashboardNavbar = () => {
-    return (
-        <div>navbar</div>
-    )
-}
+import { useState, useEffect } from "react";
 
-export default DashboardNavbar;
+const DashboardNavbar = () => {
+    const [isDark, setIsDark] = useState(false);
+
+    useEffect(() => {
+        const theme = localStorage.getItem("theme") || "light";
+        setIsDark(theme === "dark");
+        if (theme === "dark") {
+            document.documentElement.classList.add("dark");
+        }
+    }, []);
+
+    const toggleTheme = () => {
+        const newTheme = isDark ? "light" : "dark";
+        setIsDark(!isDark);
+        localStorage.setItem("theme", newTheme);
+        document.documentElement.classList.toggle("dark", newTheme === "dark");
+    };
+    return (
+        <nav className="fixed top-0 left-0 right-0 z-50 h-14 border-b bg-background/80  backdrop-blur-sm px-4 flex items-center justify-between">
+            <div className="flex items-center gap-2">
+                <div className="size-10 rounded-md flex items-center justify-center">
+                    <span className="text-primary-foreground font-bold text-sm">N</span>
+                </div>
+                <span className="text-lg font-semibold">nova</span>
+            </div>
+        </nav>
+    )
+
+    export default DashboardNavbar;
