@@ -9,6 +9,7 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from '@/components/ui/dropdown-menu';
+import { SidebarTrigger } from "@/components/ui/sidebar";
 
 const DashboardNavbar = () => {
   const navigate = useNavigate();
@@ -94,5 +95,12 @@ const DashboardNavbar = () => {
     </nav>
   );
 };
+<div className="flex items-center gap-2">
+  <SidebarTrigger className="-ml-1" />
+  <div className="size-8 rounded-md bg-primary flex items-center justify-center">
+    <span className="text-primary-foreground font-bold text-sm">N</span>
+  </div>
+  <span className="text-lg font-semibold">nova</span>
+</div>
 
 export default DashboardNavbar;
