@@ -1,13 +1,17 @@
 import DashboardNavbar from './DashboardNavbar';
-import Login from '@/pages/Login';
 
 const Dashboard = () => {
   return (
     <div className="min-h-screen">
       <DashboardNavbar />
-      <Login />
-      <main className="pt-16 p-4"></main>
+      <main className="pt-16 p-4">
+        {/* <h1 className="text-2xl font-bold">Dashboard</h1> */}
+        {/* <p className="mt-2 text-muted-foreground">
+          You are logged in 
+        </p> */}
+      </main>
     </div>
   );
 };
+
 export default Dashboard;
