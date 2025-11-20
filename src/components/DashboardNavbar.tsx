@@ -34,17 +34,37 @@ const DashboardNavbar = () => {
                 </div>
                 <span className="text-lg font-semibold">nova</span>
             </div>
-<div className="flex items-center gap-2">
-<Button 
-variant="ghost"
-size="default"
-onClick={toggleTheme}
-aria-label={isDark}
->
-    {isDark ? <Sun className="h-5 w-5" /> : <Moon className="h-5 w-5" />}
-</Button>
+            <div className="flex items-center gap-2">
+                <Button
+                    variant="ghost"
+                    size="default"
+                    onClick={toggleTheme}
+                    aria-label={isDark}
+                >
+                    {isDark ? <Sun className="h-5 w-5" /> : <Moon className="h-5 w-5" />}
+                </Button>
 
-</div>
+                <DropdownMenu>
+                    <DropdownMenuTrigger asChild>
+                        <Button variant="ghost"
+                            className="relative h-8 w-8 rounded-full">
+                            <Avatar>
+                                <AvatarImage src="https://github.com/shadcn.png" alt="User avatar" />
+                                <AvatarFallback>
+                                    <User className="h-4 w-4" />
+                                </AvatarFallback>
+                            </Avatar>
+                        </Button>
+                    </DropdownMenuTrigger>
+                    <DropdownMenuContent align="end" className="w-48">
+                        <DropdownMenuItem>Profile</DropdownMenuItem>
+            <DropdownMenuItem>Settings</DropdownMenuItem>
+            <DropdownMenuItem className="text-destructive">Log out</DropdownMenuItem>
+
+                    </DropdownMenuContent>
+                </DropdownMenu>
+
+            </div>
 
         </nav>
     )
