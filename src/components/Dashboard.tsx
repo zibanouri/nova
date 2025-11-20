@@ -1,4 +1,4 @@
-// import DashboardNavbar from "./DashboardNavbar";
+import DashboardNavbar from "./DashboardNavbar";
 
 const Dashboard = () => {
     return (
