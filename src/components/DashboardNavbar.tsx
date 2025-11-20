@@ -1,6 +1,6 @@
-import { Moon, Sun,User } from 'lucide-react';
+import { Moon, Sun, User } from 'lucide-react';
 import { useState, useEffect } from 'react';
-import { useNavigate } from 'react-router-dom'; 
+import { useNavigate } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 import {
@@ -65,7 +65,10 @@ const DashboardNavbar = () => {
 
         <DropdownMenu open={menuOpen} onOpenChange={setMenuOpen}>
           <DropdownMenuTrigger asChild>
-            <Button variant="ghost" className="relative h-8 w-8 rounded-full p-0">
+            <Button
+              variant="ghost"
+              className="relative h-8 w-8 rounded-full p-0"
+            >
               <Avatar className="h-8 w-8">
                 <AvatarImage src="public/profile/image6.webp" alt="User" />
                 <AvatarFallback>
@@ -76,8 +79,13 @@ const DashboardNavbar = () => {
           </DropdownMenuTrigger>
           <DropdownMenuContent align="end" className="w-48">
             <DropdownMenuItem onClick={handleProfile}>Profile</DropdownMenuItem>
-            <DropdownMenuItem onClick={handleSettings}>Settings</DropdownMenuItem>
-            <DropdownMenuItem onClick={handleLogout} className="text-destructive">
+            <DropdownMenuItem onClick={handleSettings}>
+              Settings
+            </DropdownMenuItem>
+            <DropdownMenuItem
+              onClick={handleLogout}
+              className="text-destructive"
+            >
               Log out
             </DropdownMenuItem>
           </DropdownMenuContent>

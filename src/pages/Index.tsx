@@ -13,7 +13,7 @@ export default function Index() {
   }, [navigate]);
 
   const token = localStorage.getItem('auth_token');
-  if (!token) return null; 
+  if (!token) return null;
 
   return <Dashboard />;
 }
