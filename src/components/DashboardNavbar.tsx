@@ -30,7 +30,7 @@ const DashboardNavbar = () => {
     <nav className="fixed top-0 left-0 right-0 z-50 h-14 border-b bg-background/80  backdrop-blur-sm px-4 flex items-center justify-between">
       <div className="flex items-center gap-2">
         <div className="size-10 rounded-md flex items-center justify-center">
-          <span className="text-primary-foreground font-bold text-sm">N</span>
+          <Button className="text-primary-foreground font-bold text-sm">N</Button>
         </div>
         <span className="text-lg font-semibold">nova</span>
       </div>
@@ -49,7 +49,7 @@ const DashboardNavbar = () => {
             <Button variant="ghost" className="relative h-8 w-8 rounded-full">
               <Avatar>
                 <AvatarImage
-                  src="https://github.com/shadcn.png"
+                  src="public/Profile/image6.webp"
                   alt="User avatar"
                 />
                 <AvatarFallback>
@@ -63,6 +63,9 @@ const DashboardNavbar = () => {
             <DropdownMenuItem>Settings</DropdownMenuItem>
             <DropdownMenuItem className="text-destructive">
               Log out
+            </DropdownMenuItem>
+             <DropdownMenuItem className="text-destructive">
+              Log in
             </DropdownMenuItem>
           </DropdownMenuContent>
         </DropdownMenu>
