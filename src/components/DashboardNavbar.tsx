@@ -74,7 +74,7 @@ const DashboardNavbar = () => {
               className="relative h-8 w-8 rounded-full p-0"
             >
               <Avatar className="h-8 w-8">
-                <AvatarImage src="/profile/image6.webp" alt="User" />
+                <AvatarImage src="public/profile/image6.webp" alt="User" />
                 <AvatarFallback>
                   <User className="h-4 w-4" />
                 </AvatarFallback>
@@ -95,7 +95,7 @@ const DashboardNavbar = () => {
                   onClick={handleLogout}
                   className="text-destructive"
                 >
-                  Log out
+                  Log in
                 </DropdownMenuItem>
               </>
             ) : (
