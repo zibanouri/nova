@@ -39,7 +39,7 @@ const DashboardNavbar = () => {
                     variant="ghost"
                     size="default"
                     onClick={toggleTheme}
-                    aria-label={isDark}
+                  aria-label={`Toggle ${isDark ? "light" : "dark"} mode`}
                 >
                     {isDark ? <Sun className="h-5 w-5" /> : <Moon className="h-5 w-5" />}
                 </Button>
@@ -67,6 +67,6 @@ const DashboardNavbar = () => {
             </div>
 
         </nav>
-    )
-
+    );
+};
     export default DashboardNavbar;
