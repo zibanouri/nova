@@ -1,3 +1,4 @@
+// DashboardSidebar.tsx — نسخه اصلاح‌شده (بدون fixed دستی!)
 import {
   Sidebar,
   SidebarContent,
@@ -11,7 +12,6 @@ import {
 } from "@/components/ui/sidebar";
 import { Home, Settings, User } from "lucide-react";
 
-
 const items = [
   { title: "Dashboard", url: "/", icon: Home },
   { title: "Profile", url: "/profile", icon: User },
@@ -19,8 +19,8 @@ const items = [
 ];
 
 const DashboardSidebar = () => {
-    return (
-    <Sidebar>
+  return (
+    <Sidebar side="left" variant="sidebar">
       <SidebarContent>
         <SidebarGroup>
           <SidebarGroupLabel>Navigation</SidebarGroupLabel>
@@ -30,7 +30,7 @@ const DashboardSidebar = () => {
                 <SidebarMenuItem key={item.title}>
                   <SidebarMenuButton asChild>
                     <a href={item.url} className="flex items-center gap-2">
-                      <item.icon className="h-4 w-4" />
+                      <item.icon className="h-4 w-4 shrink-0" />
                       <span>{item.title}</span>
                     </a>
                   </SidebarMenuButton>
@@ -40,10 +40,9 @@ const DashboardSidebar = () => {
           </SidebarGroupContent>
         </SidebarGroup>
       </SidebarContent>
-      <SidebarRail /> 
+      <SidebarRail />
     </Sidebar>
   );
-}
-
+};
 
 export default DashboardSidebar;

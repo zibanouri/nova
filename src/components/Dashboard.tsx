@@ -1,19 +1,16 @@
-import DashboardNavbar from '@/components/DashboardNavbar';
-import DashboardSidebar from '@/components/DashboardSidebar';
-import { SidebarProvider, SidebarInset } from "@/components/ui/sidebar";
+// src/components/layouts/DashboardLayout.tsx
+import { SidebarProvider } from "@/components/ui/sidebar";
+import DashboardNavbar from "@/components/DashboardNavbar";
+import DashboardSidebar from "@/components/DashboardSidebar";
 
-const Dashboard = () => {
+export default function DashboardLayout({ children }: { children: React.ReactNode }) {
   return (
     <SidebarProvider>
       <DashboardSidebar />
-      <SidebarInset>
+      <main className="flex flex-1 flex-col">
         <DashboardNavbar />
-        <main className="flex-1 p-4">
-          <div></div>
-        </main>
-      </SidebarInset>
+        <div className="flex-1 p-4 pt-4">{children}</div>
+      </main>
     </SidebarProvider>
   );
-};
-
-export default Dashboard;
+}
