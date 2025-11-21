@@ -1,4 +1,3 @@
-// DashboardSidebar.tsx — نسخه اصلاح‌شده (بدون fixed دستی!)
 import {
   Sidebar,
   SidebarContent,
