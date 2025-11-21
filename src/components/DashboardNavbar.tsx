@@ -9,8 +9,7 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from '@/components/ui/dropdown-menu';
-import { SidebarTrigger } from "@/components/ui/sidebar";
-
+import { SidebarTrigger } from "@/components/ui/sidebar"; 
 const DashboardNavbar = () => {
   const navigate = useNavigate();
   const [isDark, setIsDark] = useState(false);
@@ -46,8 +45,9 @@ const DashboardNavbar = () => {
   };
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 h-14 border-b bg-background/80 backdrop-blur-sm px-4 flex items-center justify-between">
+    <nav className="sticky top-0 z-50 h-14 border-b bg-background/80 backdrop-blur-sm px-4 flex items-center justify-between">
       <div className="flex items-center gap-2">
+         <SidebarTrigger className="-ml-1" /> 
         <div className="size-8 rounded-md bg-primary flex items-center justify-center">
           <span className="text-primary-foreground font-bold text-sm">N</span>
         </div>
@@ -92,15 +92,6 @@ const DashboardNavbar = () => {
           </DropdownMenuContent>
         </DropdownMenu>
       </div>
-
-
-<div className="flex items-center gap-2">
-  <SidebarTrigger className="-ml-1" />
-  <div className="size-8 rounded-md bg-primary flex items-center justify-center">
-    <span className="text-primary-foreground font-bold text-sm">N</span>
-  </div>
-  <span className="text-lg font-semibold">nova</span>
-</div>
     </nav>
 
   );

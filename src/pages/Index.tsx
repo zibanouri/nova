@@ -2,7 +2,7 @@ import { useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import Dashboard from '@/components/Dashboard';
 
-export default function Index() {
+const Index = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -17,3 +17,5 @@ export default function Index() {
 
   return <Dashboard />;
 }
+
+export default Index;
