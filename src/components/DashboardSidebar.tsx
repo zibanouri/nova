@@ -1,5 +1,3 @@
-// import * as React from "react";
-import { SidebarTrigger } from "@/components/ui/sidebar";
 import {
   Sidebar,
   SidebarContent,
@@ -19,9 +17,6 @@ const items = [
   { title: "Profile", url: "/profile", icon: User },
   { title: "Settings", url: "/settings", icon: Settings },
 ];
-
-
-
 
 const DashboardSidebar = () => {
     return (

@@ -92,9 +92,8 @@ const DashboardNavbar = () => {
           </DropdownMenuContent>
         </DropdownMenu>
       </div>
-    </nav>
-  );
-};
+
+
 <div className="flex items-center gap-2">
   <SidebarTrigger className="-ml-1" />
   <div className="size-8 rounded-md bg-primary flex items-center justify-center">
@@ -102,5 +101,9 @@ const DashboardNavbar = () => {
   </div>
   <span className="text-lg font-semibold">nova</span>
 </div>
+    </nav>
+
+  );
+};
 
 export default DashboardNavbar;
