@@ -9,12 +9,10 @@ import {
   DropdownMenuSeparator,
 } from "@/components/ui/dropdown-menu";
 import { Popover, PopoverTrigger, PopoverContent } from "@/components/ui/popover";
-import { Badge } from "@/components/ui/badge";
 import {
   Menu,
   Moon,
   Sun,
-  Settings,
   User,
   LogOut,
   LogIn,
@@ -57,11 +55,11 @@ const DashboardHeader = ({ onToggleSidebar, onPageChange }: NavbarProps) => {
         </Button>
         <Popover>
           <PopoverTrigger asChild>
-            <Button variant="ghost" size="icon" className="relative">
+            {/* <Button variant="ghost" size="icon" className="relative">
               <Badge className="absolute -top-1 -right-1 h-4 w-4 rounded-full p-0 bg-red-400 text-white flex items-center justify-center">
                 3
               </Badge>
-            </Button>
+            </Button> */}
           </PopoverTrigger>
           <PopoverContent className="w-80 p-0">
             <div className="p-4 border-b font-semibold">Notifications</div>
