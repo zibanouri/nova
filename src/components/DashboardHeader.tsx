@@ -95,7 +95,6 @@ const DashboardHeader = ({ onToggleSidebar, onPageChange }: NavbarProps) => {
           </PopoverContent>
         </Popover>
         <Button variant="ghost" size="icon">
-          <Settings className="h-5 w-5" />
         </Button>
         <DropdownMenu>
           <DropdownMenuTrigger asChild>
@@ -111,7 +110,6 @@ const DashboardHeader = ({ onToggleSidebar, onPageChange }: NavbarProps) => {
               <User className="h-4 w-4 mr-2" /> Profile
             </DropdownMenuItem>
             <DropdownMenuItem>
-              <Settings className="h-4 w-4 mr-2" /> Settings
             </DropdownMenuItem>
             <DropdownMenuSeparator />
             <DropdownMenuItem asChild>
