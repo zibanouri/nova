@@ -1,6 +1,6 @@
-import { SidebarProvider } from "@/components/ui/sidebar";
-import DashboardSidebar from "@/components/DashboardSidebar";
-import DashboardHeader from "@/components/DashboardHeader";
+import { SidebarProvider } from '@/components/ui/sidebar';
+import DashboardSidebar from '@/components/DashboardSidebar';
+import DashboardHeader from '@/components/DashboardHeader';
 
 const Dashboard = () => {
   return (
@@ -9,5 +9,5 @@ const Dashboard = () => {
       <DashboardHeader />
     </SidebarProvider>
   );
-}
+};
 export default Dashboard;

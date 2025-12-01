@@ -11,7 +11,7 @@ import {
   SidebarMenuSubButton,
   SidebarMenuSubItem,
   SidebarRail,
-} from "@/components/ui/sidebar";
+} from '@/components/ui/sidebar';
 import {
   Home,
   Settings,
@@ -20,40 +20,44 @@ import {
   ChevronDown,
   ChevronRight,
   HelpCircle,
-} from "lucide-react";
-import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "@/components/ui/collapsible";
-import { useState } from "react";
+} from 'lucide-react';
+import {
+  Collapsible,
+  CollapsibleContent,
+  CollapsibleTrigger,
+} from '@/components/ui/collapsible';
+import { useState } from 'react';
 const items = [
   {
-    title: "Dashboard",
-    url: "/",
+    title: 'Dashboard',
+    url: '/',
     icon: Home,
   },
   {
-    title: "Profile",
-    url: "/profile",
+    title: 'Profile',
+    url: '/profile',
     icon: User,
   },
   {
-    title: "Content",
+    title: 'Content',
     icon: FileText,
     subItems: [
-      { title: "Posts", url: "/posts" },
-      { title: "Categories", url: "/categories" },
-      { title: "Comments", url: "/comments" },
+      { title: 'Posts', url: '/posts' },
+      { title: 'Categories', url: '/categories' },
+      { title: 'Comments', url: '/comments' },
     ],
   },
   {
-    title: "Settings",
-    url: "/settings",
+    title: 'Settings',
+    url: '/settings',
     icon: Settings,
   },
   {
-    title: "Support",
+    title: 'Support',
     icon: HelpCircle,
     subItems: [
-      { title: "FAQ", url: "/faq" },
-      { title: "Contact", url: "/contact" },
+      { title: 'FAQ', url: '/faq' },
+      { title: 'Contact', url: '/contact' },
     ],
   },
 ];
@@ -62,9 +66,9 @@ const DashboardSidebar = () => {
   const [openItems, setOpenItems] = useState<Record<string, boolean>>({});
 
   const toggleItem = (title: string) => {
-    setOpenItems(prev => ({
+    setOpenItems((prev) => ({
       ...prev,
-      [title]: !prev[title]
+      [title]: !prev[title],
     }));
   };
 
@@ -80,13 +84,13 @@ const DashboardSidebar = () => {
               {items.map((item) => (
                 <SidebarMenuItem key={item.title}>
                   {item.subItems ? (
-                    <Collapsible 
+                    <Collapsible
                       open={openItems[item.title] || false}
                       onOpenChange={() => toggleItem(item.title)}
                       className="group/collapsible"
                     >
                       <CollapsibleTrigger asChild>
-                        <SidebarMenuButton 
+                        <SidebarMenuButton
                           tooltip={item.title}
                           className="data-[state=open]:bg-emerald-100 data-[state=open]:text-emerald-700
                                      dark:data-[state=open]:bg-emerald-900/40 dark:data-[state=open]:text-emerald-200"
@@ -105,11 +109,13 @@ const DashboardSidebar = () => {
                           {item.subItems.map((subItem) => (
                             <SidebarMenuSubItem key={subItem.title}>
                               <SidebarMenuSubButton asChild>
-                                <a 
+                                <a
                                   href={subItem.url}
                                   className="flex items-center gap-2"
                                 >
-                                  <span className="text-xs">{subItem.title}</span>
+                                  <span className="text-xs">
+                                    {subItem.title}
+                                  </span>
                                 </a>
                               </SidebarMenuSubButton>
                             </SidebarMenuSubItem>
@@ -119,10 +125,7 @@ const DashboardSidebar = () => {
                     </Collapsible>
                   ) : (
                     <SidebarMenuButton asChild>
-                      <a 
-                        href={item.url} 
-                        className="flex items-center gap-2"
-                      >
+                      <a href={item.url} className="flex items-center gap-2">
                         <item.icon className="h-4 w-4 shrink-0" />
                         <span>{item.title}</span>
                       </a>

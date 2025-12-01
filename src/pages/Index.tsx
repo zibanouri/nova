@@ -1,6 +1,6 @@
 import { useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
-import Dashboard  from '@/components/Dashboard';
+import Dashboard from '@/components/Dashboard';
 
 const Index = () => {
   const navigate = useNavigate();
@@ -15,9 +15,6 @@ const Index = () => {
   const token = localStorage.getItem('auth_token');
   if (!token) return null;
 
-  return (
-    <Dashboard>
-    </Dashboard>
-  );
+  return <Dashboard></Dashboard>;
 };
 export default Index;
