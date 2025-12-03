@@ -9,7 +9,7 @@ const queryClient = new QueryClient();
 function App() {
     return (
         <QueryClientProvider client={queryClient}>
-            <BrowserRouter basename="/cores">
+            <BrowserRouter basename="/nova">
                 <Routes>
                     <Route path="/" element={<Index />} />
                     <Route path="/login" element={<LoginPage />} />
