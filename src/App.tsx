@@ -3,20 +3,19 @@ import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import Index from './pages/Index';
 import LoginPage from './pages/LoginPage';
 
-
 const queryClient = new QueryClient();
 
 function App() {
-    return (
-        <QueryClientProvider client={queryClient}>
-            <BrowserRouter basename="/nova">
-                <Routes>
-                    <Route path="/" element={<Index />} />
-                    <Route path="/login" element={<LoginPage />} />
-                </Routes>
-            </BrowserRouter>
-        </QueryClientProvider>
-    );
+  return (
+    <QueryClientProvider client={queryClient}>
+      <BrowserRouter basename="/nova">
+        <Routes>
+          <Route path="/" element={<Index />} />
+          <Route path="/login" element={<LoginPage />} />
+        </Routes>
+      </BrowserRouter>
+    </QueryClientProvider>
+  );
 }
 
 export default App;
