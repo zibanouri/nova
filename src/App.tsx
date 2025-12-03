@@ -1,16 +1,22 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import Index from './pages/Index';
 import LoginPage from './pages/LoginPage';
+
+
+const queryClient = new QueryClient();
+
 function App() {
-  return (
-    <BrowserRouter basename="/nova">
-      <Routes>
-         <Route path="/login" element={<LoginPage />} />
-        <Route path="/" element={<Index />} />
-        <Route path="*" element={<Index />} />
-      </Routes>
-    </BrowserRouter>
-  );
+    return (
+        <QueryClientProvider client={queryClient}>
+            <BrowserRouter basename="/cores">
+                <Routes>
+                    <Route path="/" element={<Index />} />
+                    <Route path="/login" element={<LoginPage />} />
+                </Routes>
+            </BrowserRouter>
+        </QueryClientProvider>
+    );
 }
 
 export default App;
