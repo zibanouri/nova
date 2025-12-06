@@ -118,12 +118,12 @@ const DashboardHeader = ({ onToggleSidebar, onPageChange }: NavbarProps) => {
             <DropdownMenuItem></DropdownMenuItem>
             <DropdownMenuSeparator />
             <DropdownMenuItem asChild>
-              <a href="/register">
+              <a href="/nova/register">
                 <UserPlus className="h-4 w-4 mr-2" /> Register
               </a>
             </DropdownMenuItem>
             <DropdownMenuItem asChild>
-              <a href="/login">
+              <a href="/nova/login">
                 <LogIn className="h-4 w-4 mr-2" /> Login
               </a>
             </DropdownMenuItem>
