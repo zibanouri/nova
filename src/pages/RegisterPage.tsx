@@ -10,7 +10,7 @@ import {
 } from '@/components/ui/card';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
-import { Eye, EyeClosed, Leaf, User, Mail, Lock, UserPlus, Globe } from 'lucide-react';
+import { Eye, EyeClosed, Leaf, User, Mail, UserPlus} from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
 
 const RegisterPage = () => {
@@ -48,37 +48,38 @@ const RegisterPage = () => {
           <form onSubmit={handleRegister}>
             <CardContent className="space-y-4">
               <div className="grid grid-cols-2 gap-4">
-                <div className="space-y-2">
-                  <Label htmlFor="firstName" className="text-slate-700 flex items-center">
-                    First Name
-                    <User className="ml-1.5 h-4 w-4 text-slate-500" />
-                  </Label>
-                  <Input
-                    id="firstName"
-                    name="firstName"
-                    placeholder="..."
-                    required
-                    className="border-slate-300 focus:ring-emerald-500 focus:border-emerald-500"
-                  />
-                </div>
-                <div className="space-y-2">
-                  <Label htmlFor="lastName" className="text-slate-700 flex items-center">
-                    Last Name
-                    <User className="ml-1.5 h-4 w-4 text-slate-500" />
-                  </Label>
-                  <Input
-                    id="lastName"
-                    name="lastName"
-                    placeholder="..."
-                    required
-                    className="border-slate-300 focus:ring-emerald-500 focus:border-emerald-500"
-                  />
-                </div>
+               <div className="space-y-2">
+  <Label htmlFor="firstName" className="text-slate-700 flex items-center">
+    <User className="mr-2 h-4 w-4 text-slate-500" />
+    First Name
+  </Label>
+  <Input
+    id="firstName"
+    name="firstName"
+    placeholder="..."
+    required
+    className="border-slate-300 focus:ring-emerald-500 focus:border-emerald-500"
+  />
+</div>
+
+<div className="space-y-2">
+  <Label htmlFor="lastName" className="text-slate-700 flex items-center">
+    <User className="mr-2 h-4 w-4 text-slate-500" />
+    Last Name
+  </Label>
+  <Input
+    id="lastName"
+    name="lastName"
+    placeholder="..."
+    required
+    className="border-slate-300 focus:ring-emerald-500 focus:border-emerald-500"
+  />
+</div>
               </div>
 
               <div className="space-y-2">
                 <Label htmlFor="email" className="text-slate-700 flex items-center">
-                  <Mail className="ml-2 h-4 w-4 text-slate-500" />
+                  <Mail className="mr-2 h-4 w-4 text-slate-500" />
                    Email
                 </Label>
                 <Input
@@ -94,8 +95,6 @@ const RegisterPage = () => {
               <div className="space-y-2">
                 <div className="flex items-center justify-between">
                   <Label htmlFor="password" className="text-slate-700 flex items-center">
-                   
-                    <Lock className="ml-1.5 h-4 w-4 text-slate-500" />
                    Password</Label>
                   <a
                     href="#"
@@ -109,7 +108,7 @@ const RegisterPage = () => {
                     id="password"
                     name="password"
                     type={showPassword ? 'text' : 'password'}
-                    placeholder="••••••••"
+                    placeholder="......"
                     required
                     className="pr-10 border-slate-300 focus:ring-emerald-500 focus:border-emerald-500"
                   />
@@ -140,15 +139,6 @@ const RegisterPage = () => {
               >
                 <UserPlus className="mr-2 h-4 w-4" />
                 Sign up
-              </Button>
-              <Button
-                type="button"
-                variant="outline"
-                className="w-full border-emerald-300 text-emerald-600 hover:bg-emerald-50 hover:border-emerald-400"
-                onClick={() => navigate('/')}
-              >
-                <Globe className="mr-2 h-4 w-4" />
-                Sign up with Google
               </Button>
               <Button
                 type="button"
