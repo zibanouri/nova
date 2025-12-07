@@ -11,11 +11,11 @@ const NotFound = () => {
           <h1 className="text-3xl font-semibold text-slate-800 inline-flex items-center justify-center">
             Not found — but you’re safe here.
           </h1>
-          <p className="text-4xl font-mono font-bold text-emerald-700 tracking-tight">404</p>
+          <p className="text-4xl font-mono font-bold text-emerald-700">404</p>
         </div>
 
         <div className="space-y-3">
-          <p className="text-slate-800 leading-relaxed"> 
+          <p className="text-slate-800 "> 
             It whispered: <span className="italic">“Route not defined… yet.”</span>
           </p>
           <p className="text-slate-700 text-sm">
