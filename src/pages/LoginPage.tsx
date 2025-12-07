@@ -10,7 +10,7 @@ import {
 } from '@/components/ui/card';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
-import { Eye, EyeClosed,Mail } from 'lucide-react';
+import { Eye, EyeClosed, Mail } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
 
 const LoginPage = () => {
@@ -44,11 +44,13 @@ const LoginPage = () => {
           <form onSubmit={handleLogin}>
             <CardContent className="space-y-4">
               <div className="space-y-2">
-               
-               <Label htmlFor="email" className="text-slate-700 flex items-center">
-  <Mail className="mr-2 h-4 w-4 text-slate-500" />
-  Email
-</Label>
+                <Label
+                  htmlFor="email"
+                  className="text-slate-700 flex items-center"
+                >
+                  <Mail className="mr-2 h-4 w-4 text-slate-500" />
+                  Email
+                </Label>
                 <Input
                   id="email"
                   name="email"

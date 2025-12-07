@@ -10,7 +10,7 @@ import {
 } from '@/components/ui/card';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
-import { Eye, EyeClosed, Leaf, User, Mail, UserPlus} from 'lucide-react';
+import { Eye, EyeClosed, Leaf, User, Mail, UserPlus } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
 
 const RegisterPage = () => {
@@ -48,39 +48,48 @@ const RegisterPage = () => {
           <form onSubmit={handleRegister}>
             <CardContent className="space-y-4">
               <div className="grid grid-cols-2 gap-4">
-               <div className="space-y-2">
-  <Label htmlFor="firstName" className="text-slate-700 flex items-center">
-    <User className="mr-2 h-4 w-4 text-slate-500" />
-    First Name
-  </Label>
-  <Input
-    id="firstName"
-    name="firstName"
-    placeholder="..."
-    required
-    className="border-slate-300 focus:ring-emerald-500 focus:border-emerald-500"
-  />
-</div>
+                <div className="space-y-2">
+                  <Label
+                    htmlFor="firstName"
+                    className="text-slate-700 flex items-center"
+                  >
+                    <User className="mr-2 h-4 w-4 text-slate-500" />
+                    First Name
+                  </Label>
+                  <Input
+                    id="firstName"
+                    name="firstName"
+                    placeholder="..."
+                    required
+                    className="border-slate-300 focus:ring-emerald-500 focus:border-emerald-500"
+                  />
+                </div>
 
-<div className="space-y-2">
-  <Label htmlFor="lastName" className="text-slate-700 flex items-center">
-    <User className="mr-2 h-4 w-4 text-slate-500" />
-    Last Name
-  </Label>
-  <Input
-    id="lastName"
-    name="lastName"
-    placeholder="..."
-    required
-    className="border-slate-300 focus:ring-emerald-500 focus:border-emerald-500"
-  />
-</div>
+                <div className="space-y-2">
+                  <Label
+                    htmlFor="lastName"
+                    className="text-slate-700 flex items-center"
+                  >
+                    <User className="mr-2 h-4 w-4 text-slate-500" />
+                    Last Name
+                  </Label>
+                  <Input
+                    id="lastName"
+                    name="lastName"
+                    placeholder="..."
+                    required
+                    className="border-slate-300 focus:ring-emerald-500 focus:border-emerald-500"
+                  />
+                </div>
               </div>
 
               <div className="space-y-2">
-                <Label htmlFor="email" className="text-slate-700 flex items-center">
+                <Label
+                  htmlFor="email"
+                  className="text-slate-700 flex items-center"
+                >
                   <Mail className="mr-2 h-4 w-4 text-slate-500" />
-                   Email
+                  Email
                 </Label>
                 <Input
                   id="email"
@@ -94,8 +103,12 @@ const RegisterPage = () => {
 
               <div className="space-y-2">
                 <div className="flex items-center justify-between">
-                  <Label htmlFor="password" className="text-slate-700 flex items-center">
-                   Password</Label>
+                  <Label
+                    htmlFor="password"
+                    className="text-slate-700 flex items-center"
+                  >
+                    Password
+                  </Label>
                   <a
                     href="#"
                     className="text-sm font-medium text-emerald-600 hover:text-emerald-500 underline-offset-2 hover:underline"
