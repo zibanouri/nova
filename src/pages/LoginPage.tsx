@@ -33,7 +33,9 @@ const LoginPage = () => {
 
         <Card className="w-full max-w-sm border-emerald-200 shadow-sm">
           <CardHeader>
-            <CardTitle className="text-xl text-emerald-800">Login to your account</CardTitle>
+            <CardTitle className="text-xl text-emerald-800">
+              Login to your account
+            </CardTitle>
             <CardDescription className="text-slate-600">
               Enter your email below to login to your account
             </CardDescription>
@@ -42,7 +44,9 @@ const LoginPage = () => {
           <form onSubmit={handleLogin}>
             <CardContent className="space-y-4">
               <div className="space-y-2">
-                <Label htmlFor="email" className="text-slate-700">Email</Label>
+                <Label htmlFor="email" className="text-slate-700">
+                  Email
+                </Label>
                 <Input
                   id="email"
                   name="email"
@@ -55,7 +59,9 @@ const LoginPage = () => {
 
               <div className="space-y-2">
                 <div className="flex items-center justify-between">
-                  <Label htmlFor="password" className="text-slate-700">Password</Label>
+                  <Label htmlFor="password" className="text-slate-700">
+                    Password
+                  </Label>
                   <a
                     href="#"
                     className="text-sm font-medium text-emerald-600 hover:text-emerald-500 underline-offset-2 hover:underline"
@@ -78,7 +84,9 @@ const LoginPage = () => {
                     size="sm"
                     className="absolute inset-y-0 right-0 flex h-full items-center px-3 text-slate-500 hover:text-emerald-600"
                     onClick={() => setShowPassword(!showPassword)}
-                    aria-label={showPassword ? 'Hide password' : 'Show password'}
+                    aria-label={
+                      showPassword ? 'Hide password' : 'Show password'
+                    }
                   >
                     {showPassword ? (
                       <Eye className="h-4 w-4" />

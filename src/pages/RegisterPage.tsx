@@ -26,13 +26,18 @@ const RegisterPage = () => {
       <div className="w-full max-w-md">
         <div className="pl-2 mb-8">
           <h1 className="text-2xl font-bold text-emerald-700">
-            Glad to see you again!
+            Welcome aboard!
           </h1>
+          <h2 className="text-2xl font-bold text-emerald-700">
+            Create your account to begin
+          </h2>
         </div>
 
         <Card className="w-full max-w-sm border-emerald-200 shadow-sm">
           <CardHeader>
-            <CardTitle className="text-xl text-emerald-800">Login to your account</CardTitle>
+            <CardTitle className="text-xl text-emerald-800">
+              Login to your account
+            </CardTitle>
             <CardDescription className="text-slate-600">
               Enter your email below to login to your account
             </CardDescription>
@@ -42,7 +47,9 @@ const RegisterPage = () => {
             <CardContent className="space-y-4">
               <div className="grid grid-cols-2 gap-4">
                 <div className="space-y-2">
-                  <Label htmlFor="firstName" className="text-slate-700">First Name</Label>
+                  <Label htmlFor="firstName" className="text-slate-700">
+                    First Name
+                  </Label>
                   <Input
                     id="firstName"
                     name="firstName"
@@ -52,7 +59,9 @@ const RegisterPage = () => {
                   />
                 </div>
                 <div className="space-y-2">
-                  <Label htmlFor="lastName" className="text-slate-700">Last Name</Label>
+                  <Label htmlFor="lastName" className="text-slate-700">
+                    Last Name
+                  </Label>
                   <Input
                     id="lastName"
                     name="lastName"
@@ -64,7 +73,9 @@ const RegisterPage = () => {
               </div>
 
               <div className="space-y-2">
-                <Label htmlFor="email" className="text-slate-700">Email</Label>
+                <Label htmlFor="email" className="text-slate-700">
+                  Email
+                </Label>
                 <Input
                   id="email"
                   name="email"
@@ -77,7 +88,9 @@ const RegisterPage = () => {
 
               <div className="space-y-2">
                 <div className="flex items-center justify-between">
-                  <Label htmlFor="password" className="text-slate-700">Password</Label>
+                  <Label htmlFor="password" className="text-slate-700">
+                    Password
+                  </Label>
                   <a
                     href="#"
                     className="text-sm font-medium text-emerald-600 hover:text-emerald-500 underline-offset-2 hover:underline"
@@ -100,7 +113,9 @@ const RegisterPage = () => {
                     size="sm"
                     className="absolute inset-y-0 right-0 flex h-full items-center px-3 text-slate-500 hover:text-emerald-600"
                     onClick={() => setShowPassword(!showPassword)}
-                    aria-label={showPassword ? 'Hide password' : 'Show password'}
+                    aria-label={
+                      showPassword ? 'Hide password' : 'Show password'
+                    }
                   >
                     {showPassword ? (
                       <Eye className="h-4 w-4" />
@@ -142,6 +157,5 @@ const RegisterPage = () => {
     </div>
   );
 };
-
 
 export default RegisterPage;
