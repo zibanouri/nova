@@ -10,13 +10,14 @@ import {
 } from '@/components/ui/card';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
-import { Eye, EyeClosed } from 'lucide-react';
+import { Eye, EyeClosed, Leaf, User, Mail, Lock, UserPlus, Globe } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
+
 const RegisterPage = () => {
   const navigate = useNavigate();
   const [showPassword, setShowPassword] = useState(false);
 
-  const handleLogin = (e: React.FormEvent) => {
+  const handleRegister = (e: React.FormEvent) => {
     e.preventDefault();
     navigate('/');
   };
@@ -25,10 +26,11 @@ const RegisterPage = () => {
     <div className="min-h-screen linear-gradient-to-br from-slate-50 to-emerald-50/30 flex items-center justify-center p-4">
       <div className="w-full max-w-md">
         <div className="pl-2 mb-8">
-          <h1 className="text-2xl font-bold text-emerald-700">
-            Welcome aboard!
+          <h1 className="text-2xl font-bold text-emerald-700 flex items-center">
+            Welcome to my panel!
+            <Leaf className="ml-2 h-5 w-5 text-emerald-600" />
           </h1>
-          <h2 className="text-2xl font-bold text-emerald-700">
+          <h2 className="text-lg text-slate-600 mt-1">
             Create your account to begin
           </h2>
         </div>
@@ -36,19 +38,20 @@ const RegisterPage = () => {
         <Card className="w-full max-w-sm border-emerald-200 shadow-sm">
           <CardHeader>
             <CardTitle className="text-xl text-emerald-800">
-              Login to your account
+              Create your account
             </CardTitle>
             <CardDescription className="text-slate-600">
-              Enter your email below to login to your account
+              Fill in the details below to get started
             </CardDescription>
           </CardHeader>
 
-          <form onSubmit={handleLogin}>
+          <form onSubmit={handleRegister}>
             <CardContent className="space-y-4">
               <div className="grid grid-cols-2 gap-4">
                 <div className="space-y-2">
-                  <Label htmlFor="firstName" className="text-slate-700">
+                  <Label htmlFor="firstName" className="text-slate-700 flex items-center">
                     First Name
+                    <User className="ml-1.5 h-4 w-4 text-slate-500" />
                   </Label>
                   <Input
                     id="firstName"
@@ -59,8 +62,9 @@ const RegisterPage = () => {
                   />
                 </div>
                 <div className="space-y-2">
-                  <Label htmlFor="lastName" className="text-slate-700">
+                  <Label htmlFor="lastName" className="text-slate-700 flex items-center">
                     Last Name
+                    <User className="ml-1.5 h-4 w-4 text-slate-500" />
                   </Label>
                   <Input
                     id="lastName"
@@ -73,8 +77,9 @@ const RegisterPage = () => {
               </div>
 
               <div className="space-y-2">
-                <Label htmlFor="email" className="text-slate-700">
-                  Email
+                <Label htmlFor="email" className="text-slate-700 flex items-center">
+                  <Mail className="ml-2 h-4 w-4 text-slate-500" />
+                   Email
                 </Label>
                 <Input
                   id="email"
@@ -88,9 +93,10 @@ const RegisterPage = () => {
 
               <div className="space-y-2">
                 <div className="flex items-center justify-between">
-                  <Label htmlFor="password" className="text-slate-700">
-                    Password
-                  </Label>
+                  <Label htmlFor="password" className="text-slate-700 flex items-center">
+                   
+                    <Lock className="ml-1.5 h-4 w-4 text-slate-500" />
+                   Password</Label>
                   <a
                     href="#"
                     className="text-sm font-medium text-emerald-600 hover:text-emerald-500 underline-offset-2 hover:underline"
@@ -132,7 +138,8 @@ const RegisterPage = () => {
                 type="submit"
                 className="w-full bg-emerald-600 hover:bg-emerald-500 text-white"
               >
-                Login
+                <UserPlus className="mr-2 h-4 w-4" />
+                Sign up
               </Button>
               <Button
                 type="button"
@@ -140,15 +147,16 @@ const RegisterPage = () => {
                 className="w-full border-emerald-300 text-emerald-600 hover:bg-emerald-50 hover:border-emerald-400"
                 onClick={() => navigate('/')}
               >
-                Login with Google
+                <Globe className="mr-2 h-4 w-4" />
+                Sign up with Google
               </Button>
               <Button
                 type="button"
                 variant="link"
                 className="px-0 font-normal text-sm text-emerald-600 hover:text-emerald-500"
-                onClick={() => navigate('/register')}
+                onClick={() => navigate('/login')}
               >
-                Don’t have an account? Sign up
+                Already have an account? Log in
               </Button>
             </CardFooter>
           </form>
