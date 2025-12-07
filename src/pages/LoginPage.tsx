@@ -41,29 +41,6 @@ const LoginPage = () => {
 
           <form onSubmit={handleLogin}>
             <CardContent className="space-y-4">
-              <div className="grid grid-cols-2 gap-4">
-                <div className="space-y-2">
-                  <Label htmlFor="firstName" className="text-slate-700">First Name</Label>
-                  <Input
-                    id="firstName"
-                    name="firstName"
-                    placeholder="..."
-                    required
-                    className="border-slate-300 focus:ring-emerald-500 focus:border-emerald-500"
-                  />
-                </div>
-                <div className="space-y-2">
-                  <Label htmlFor="lastName" className="text-slate-700">Last Name</Label>
-                  <Input
-                    id="lastName"
-                    name="lastName"
-                    placeholder="..."
-                    required
-                    className="border-slate-300 focus:ring-emerald-500 focus:border-emerald-500"
-                  />
-                </div>
-              </div>
-
               <div className="space-y-2">
                 <Label htmlFor="email" className="text-slate-700">Email</Label>
                 <Input
